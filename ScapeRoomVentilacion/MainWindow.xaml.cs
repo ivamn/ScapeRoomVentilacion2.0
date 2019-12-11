@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MaterialDesignThemes.Wpf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -43,7 +44,7 @@ namespace ScapeRoomVentilacion
             }
             else
             {
-                PassErrorTextBlock.Visibility = Visibility.Collapsed;
+                PassErrorTextBlock.Visibility = Visibility.Hidden;
             }
             if (UsuarioTextBox.Text != Usuario)
             {
@@ -51,7 +52,7 @@ namespace ScapeRoomVentilacion
             }
             else
             {
-                UsuarioErrorTextBlock.Visibility = Visibility.Collapsed;
+                UsuarioErrorTextBlock.Visibility = Visibility.Hidden;
             }
         }
     }

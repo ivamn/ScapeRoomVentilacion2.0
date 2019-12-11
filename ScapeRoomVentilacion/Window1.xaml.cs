@@ -26,5 +26,12 @@ namespace ScapeRoomVentilacion
             
             this.WindowState = System.Windows.WindowState.Maximized;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            VentilacionTextblock.Text = "Escotillas: Cerradas";
+            MessageBox.Show("Se han cerrado las ventilaciones del edicio", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
+            Close();
+        }
     }
 }

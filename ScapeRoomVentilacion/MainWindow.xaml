@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ScapeRoomVentilacion"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+        Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize">
     <DockPanel Width="400">
-        <Button DockPanel.Dock="Bottom" IsDefault="True" Margin="5" Padding="10" Click="Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center">ENTRAR</Button>
+        <Button DockPanel.Dock="Bottom" IsDefault="True" Margin="5" Click="Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center">ENTRAR</Button>
         <TextBlock DockPanel.Dock="Bottom" x:Name="PassErrorTextBlock" Text="La contraseña es incorrecta" Visibility="Hidden"
                        Foreground="Red"/>
         <PasswordBox DockPanel.Dock="Bottom" x:Name="PassBox"></PasswordBox>

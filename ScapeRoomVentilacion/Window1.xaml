@@ -18,6 +18,10 @@
             <Setter Property="FontSize" Value="30"/>
             <Setter Property="TextAlignment" Value="Center"/>
         </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="Texto" BasedOn="{StaticResource Contenido}">
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Text" Value="Escotillas: Abiertas"/>
+        </Style>
     </Window.Resources>
     
     <Grid >        
@@ -75,7 +79,8 @@
                 </DockPanel>
                 <DockPanel Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">
                     <TextBlock DockPanel.Dock="Top" Style="{StaticResource Titulo}">Ventilacion</TextBlock>
-                    <TextBlock Style="{StaticResource Contenido}">Escotillas: Abiertas</TextBlock>
+                    <TextBlock Style="{StaticResource Texto}" x:Name="VentilacionTextblock"/>
+                    <Button DockPanel.Dock="Top" Height="50" Content="Desactivar" Padding="10" x:Name="Button" Click="Button_Click"/>
                 </DockPanel> 
                 <DockPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center">
                     <TextBlock DockPanel.Dock="Top" Style="{StaticResource Titulo}">Internet</TextBlock>
