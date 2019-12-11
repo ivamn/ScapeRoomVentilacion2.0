@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ScapeRoomVentilacion"
         mc:Ignorable="d"  
-        Title="Window1" Height="450" Width="800"
-        >
+        Title="Window1" Height="450" Width="800" MinHeight="450" MinWidth="800">
+
+    <Window.Resources>
+        <Style TargetType="{x:Type TextBlock}" x:Key="Titulo">
+            <Setter Property="FontSize" Value="40"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="ForestGreen"/>
+        </Style>
+        <Style TargetType="{x:Type TextBlock}" x:Key="Contenido">
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+    
     <Grid >        
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -37,37 +50,48 @@
                     
                 </Grid.RowDefinitions>
 
-                <DockPanel Grid.Row="0" Grid.Column="0">
-                    <TextBlock HorizontalAlignment="Center" DockPanel.Dock="Top" FontSize="30">Persianas</TextBlock>
-                    <TextBlock x:Name="PersianasTextBlock"> </TextBlock>
+                <DockPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center">
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Titulo}">Persianas</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}" Text="Abiertas: 6"/>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}" Text="Bloqueadas: 0"/>
                 </DockPanel>
                 <DockPanel HorizontalAlignment="Center" Grid.Row="0" Grid.Column="1">
-                    <TextBlock DockPanel.Dock="Top" FontSize="30">Luz</TextBlock>
-                    <TextBlock>Gastos</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Titulo}">Luz</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}">Gastos: 950 €</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}">Averiadas: 1</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}">Picos de corriente: 1</TextBlock>
                 </DockPanel>
                 <DockPanel HorizontalAlignment="Center" Grid.Row="1" Grid.Column="0">
-                    <TextBlock DockPanel.Dock="Top" FontSize="30">Calefacción</TextBlock>
-                    <TextBlock>Gastos</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Titulo}">Calefacción</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}">Gastos: 590 €</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}">Temperatura: 18º</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}">Radiadores averiados: 1</TextBlock>
                 </DockPanel>
                 <DockPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center">
-                    <TextBlock DockPanel.Dock="Top" FontSize="30">Puertas</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Titulo}">Puertas</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}">Estropeadas: 1</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}">Bloqueadas: 3</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}">Restringidas: 0</TextBlock>
                 </DockPanel>
                 <DockPanel Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center">
-                    <TextBlock DockPanel.Dock="Top" FontSize="30">Ventilacion</TextBlock>
-                    <TextBlock>Gastos</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Titulo}">Ventilacion</TextBlock>
+                    <TextBlock Style="{StaticResource Contenido}">Escotillas: Abiertas</TextBlock>
                 </DockPanel> 
                 <DockPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center">
-                    <TextBlock DockPanel.Dock="Top" FontSize="50">Internet</TextBlock>
-                    <TextBlock DockPanel.Dock="Top" FontSize="40">Gastos: 5000</TextBlock>
-                    <TextBlock DockPanel.Dock="Top" FontSize="40">Bajada: 1 GB/s</TextBlock>
-                    <TextBlock DockPanel.Dock="Top" FontSize="40">Subida: 0.5 GB/s</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Titulo}">Internet</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}">Gastos: 893 €</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}">Bajada: 1 GB/s</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}">Subida: 0.5 GB/s</TextBlock>
                 </DockPanel>
                 <DockPanel Grid.Row="3" Grid.Column="0" HorizontalAlignment="Center">
-                    <TextBlock DockPanel.Dock="Top" FontSize="30">Agua</TextBlock>
-                    <TextBlock>Gastos</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Titulo}">Agua</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}">Gastos: 105 €</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}">L/H: 16L</TextBlock>
                 </DockPanel>
                 <DockPanel Grid.Row="3" Grid.Column="1" HorizontalAlignment="Center">
-                    <TextBlock DockPanel.Dock="Top" FontSize="30">Roomba</TextBlock>                    
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Titulo}">Roomba</TextBlock>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}" Text="Roombas activos: 3"/>
+                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Contenido}" Text="Roombas desorientados: 1"/>
                 </DockPanel>
             </Grid>
         </ScrollViewer>

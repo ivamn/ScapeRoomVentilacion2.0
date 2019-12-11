@@ -5,20 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ScapeRoomVentilacion"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
-        MaxHeight="450" MaxWidth="800" MinHeight="450" MinWidth="800" >
-    <Grid>
-        <StackPanel HorizontalAlignment="Center">
-            <Image Margin="0,10,0,0" Width="250" Height="250"  Source="logoADN.png"></Image>
-            <TextBlock FontSize="15">Usuario</TextBlock>
-            <TextBox x:Name="UsuarioTextBox"></TextBox>
-            <TextBlock x:Name="UsuarioErrorTextBlock" Text="El usuario es incorrecto" Visibility="Collapsed"
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+    <DockPanel Width="400">
+        <Button DockPanel.Dock="Bottom" IsDefault="True" Margin="5" Padding="10" Click="Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center">ENTRAR</Button>
+        <TextBlock DockPanel.Dock="Bottom" x:Name="PassErrorTextBlock" Text="La contraseña es incorrecta" Visibility="Hidden"
                        Foreground="Red"/>
-            <TextBlock FontSize="15">Contraseña</TextBlock>
-            <PasswordBox x:Name="PassBox"></PasswordBox>
-            <TextBlock x:Name="PassErrorTextBlock" Text="La contraseña es incorrecto" Visibility="Collapsed"
+        <PasswordBox DockPanel.Dock="Bottom" x:Name="PassBox"></PasswordBox>
+        <TextBlock DockPanel.Dock="Bottom" FontSize="15">Contraseña</TextBlock>
+        <TextBlock DockPanel.Dock="Bottom" x:Name="UsuarioErrorTextBlock" Text="El usuario es incorrecto" Visibility="Hidden"
                        Foreground="Red"/>
-            <Button IsDefault="True" Margin="5" Padding="10" Click="Button_Click">ENTRAR</Button>
-        </StackPanel>
-    </Grid>
+        <TextBox DockPanel.Dock="Bottom" x:Name="UsuarioTextBox"></TextBox>
+        <TextBlock DockPanel.Dock="Bottom" FontSize="15">Usuario</TextBlock>
+        <Image Margin="0,10,0,0" Width="250" Height="250"  Source="logoADN.png"/>
+    </DockPanel>
 </Window>
