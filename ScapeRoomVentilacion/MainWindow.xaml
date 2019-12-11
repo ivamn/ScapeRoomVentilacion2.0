@@ -1,0 +1,24 @@
+﻿<Window x:Class="ScapeRoomVentilacion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScapeRoomVentilacion"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        MaxHeight="450" MaxWidth="800" MinHeight="450" MinWidth="800" >
+    <Grid>
+        <StackPanel HorizontalAlignment="Center">
+            <Image Margin="0,10,0,0" Width="250" Height="250"  Source="logoADN.png"></Image>
+            <TextBlock FontSize="15">Usuario</TextBlock>
+            <TextBox x:Name="UsuarioTextBox"></TextBox>
+            <TextBlock x:Name="UsuarioErrorTextBlock" Text="El usuario es incorrecto" Visibility="Collapsed"
+                       Foreground="Red"/>
+            <TextBlock FontSize="15">Contraseña</TextBlock>
+            <PasswordBox x:Name="PassBox"></PasswordBox>
+            <TextBlock x:Name="PassErrorTextBlock" Text="La contraseña es incorrecto" Visibility="Collapsed"
+                       Foreground="Red"/>
+            <Button IsDefault="True" Margin="5" Padding="10" Click="Button_Click">ENTRAR</Button>
+        </StackPanel>
+    </Grid>
+</Window>
