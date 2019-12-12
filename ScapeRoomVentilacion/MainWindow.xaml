@@ -7,6 +7,6 @@
         <TextBlock DockPanel.Dock="Bottom" x:Name="UsuarioErrorTextBlock" Text="El usuario es incorrecto" Visibility="Hidden" Foreground="Red" />
         <TextBox DockPanel.Dock="Bottom" x:Name="UsuarioTextBox"></TextBox>
         <TextBlock DockPanel.Dock="Bottom" FontSize="15">Usuario</TextBlock>
-        <Image Margin="0,10,0,0" Width="250" Height="250" Source="logoADN.png" />
+        <Image Margin="0,10,0,0" Width="250" Height="250" Source="logoADNTransparente.png" />
     </DockPanel>
 </Window>
