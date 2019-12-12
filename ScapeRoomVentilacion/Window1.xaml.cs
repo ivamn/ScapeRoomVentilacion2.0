@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -23,15 +24,15 @@ namespace ScapeRoomVentilacion
         public Window1()
         {
             InitializeComponent();
-            
+
             this.WindowState = System.Windows.WindowState.Maximized;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             VentilacionTextblock.Text = "Escotillas: Cerradas";
-            MessageBox.Show("Se han cerrado las ventilaciones del edicio", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
-            Close();
+            (sender as ToggleButton).IsEnabled = false;
+            MessageBox.Show("Se han cerrado las ventilaciones del edificio", "Aviso", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }

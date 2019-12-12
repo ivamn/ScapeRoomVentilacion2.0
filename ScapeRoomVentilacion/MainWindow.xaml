@@ -1,21 +1,12 @@
-﻿<Window x:Class="ScapeRoomVentilacion.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ScapeRoomVentilacion"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize">
+﻿<Window x:Class="ScapeRoomVentilacion.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:ScapeRoomVentilacion" xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" TextElement.Foreground="{DynamicResource MaterialDesignBody}" TextElement.FontWeight="Regular" TextElement.FontSize="13" TextOptions.TextFormattingMode="Ideal" TextOptions.TextRenderingMode="Auto" Background="{DynamicResource MaterialDesignPaper}" FontFamily="{DynamicResource MaterialDesignFont}" mc:Ignorable="d" Title="MainWindow" Height="500" Width="800" ResizeMode="NoResize">
     <DockPanel Width="400">
         <Button DockPanel.Dock="Bottom" IsDefault="True" Margin="5" Click="Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center">ENTRAR</Button>
-        <TextBlock DockPanel.Dock="Bottom" x:Name="PassErrorTextBlock" Text="La contraseña es incorrecta" Visibility="Hidden"
-                       Foreground="Red"/>
+        <TextBlock DockPanel.Dock="Bottom" x:Name="PassErrorTextBlock" Text="La contraseña es incorrecta" Visibility="Hidden" Foreground="Red" />
         <PasswordBox DockPanel.Dock="Bottom" x:Name="PassBox"></PasswordBox>
         <TextBlock DockPanel.Dock="Bottom" FontSize="15">Contraseña</TextBlock>
-        <TextBlock DockPanel.Dock="Bottom" x:Name="UsuarioErrorTextBlock" Text="El usuario es incorrecto" Visibility="Hidden"
-                       Foreground="Red"/>
+        <TextBlock DockPanel.Dock="Bottom" x:Name="UsuarioErrorTextBlock" Text="El usuario es incorrecto" Visibility="Hidden" Foreground="Red" />
         <TextBox DockPanel.Dock="Bottom" x:Name="UsuarioTextBox"></TextBox>
         <TextBlock DockPanel.Dock="Bottom" FontSize="15">Usuario</TextBlock>
-        <Image Margin="0,10,0,0" Width="250" Height="250"  Source="logoADN.png"/>
+        <Image Margin="0,10,0,0" Width="250" Height="250" Source="logoADN.png" />
     </DockPanel>
 </Window>

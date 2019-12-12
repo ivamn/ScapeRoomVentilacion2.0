@@ -1,5 +1,4 @@
-﻿using MaterialDesignThemes.Wpf;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,8 +20,8 @@ namespace ScapeRoomVentilacion
     /// </summary>
     public partial class MainWindow : Window
     {
-        private static string Pass { get; set; } = "";
-        private static string Usuario { get; set; } = "";
+        private static string Pass { get; set; } = "#dbce18#eb6323";
+        private static string Usuario { get; set; } = "@clementjose";
 
         public MainWindow()
         {
