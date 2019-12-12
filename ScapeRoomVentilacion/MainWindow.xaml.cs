@@ -20,8 +20,10 @@ namespace ScapeRoomVentilacion
     /// </summary>
     public partial class MainWindow : Window
     {
-        private static string Pass { get; set; } = "#dbce18#eb6323";
-        private static string Usuario { get; set; } = "@clementjose";
+        //#dbce18#eb6323
+        private static string Pass { get; set; } = "";
+        //@clementjose
+        private static string Usuario { get; set; } = "";
 
         public MainWindow()
         {

@@ -73,7 +73,11 @@
                 <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="0">
                     <TextBlock Style="{StaticResource Titulo}">Ventilacion</TextBlock>
                     <TextBlock Margin="20" Style="{StaticResource Texto}" x:Name="VentilacionTextblock" />
-                    <Button HorizontalAlignment="Center" Height="50" Content="Desactivar" Padding="10" x:Name="Button" Click="Button_Click" />
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                        <TextBlock Text="Cerradas" FontWeight="Bold" Margin="0,0,10,0"/>
+                        <ToggleButton x:Name="Button" Click="Button_Click" IsChecked="True"/>
+                        <TextBlock Text="Abiertas" FontWeight="Bold" Margin="10,0,0,0" />
+                    </StackPanel>
                 </StackPanel>
                 <DockPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center">
                     <TextBlock DockPanel.Dock="Top" Style="{StaticResource Titulo}">Internet</TextBlock>

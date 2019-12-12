@@ -25,7 +25,7 @@ namespace ScapeRoomVentilacion
         {
             InitializeComponent();
 
-            this.WindowState = System.Windows.WindowState.Maximized;
+            WindowState = WindowState.Maximized;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
