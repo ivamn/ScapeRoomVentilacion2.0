@@ -11,12 +11,12 @@
         Background="{DynamicResource MaterialDesignPaper}" FontFamily="{DynamicResource MaterialDesignFont}"
         mc:Ignorable="d" Title="Login" Height="500" Width="800" ResizeMode="NoResize" Icon="logo.ico">
     <DockPanel Width="400">
-        <Button DockPanel.Dock="Bottom" IsDefault="True" Margin="5" Click="Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center">ENTRAR</Button>
+        <Button DockPanel.Dock="Bottom" IsDefault="True" Margin="5" Click="Button_Click" VerticalAlignment="Center" HorizontalAlignment="Center" TabIndex="2">ENTRAR</Button>
         <TextBlock DockPanel.Dock="Bottom" x:Name="PassErrorTextBlock" Text="La contraseña es incorrecta" Visibility="Hidden" Foreground="Red" />
-        <PasswordBox DockPanel.Dock="Bottom" x:Name="PassBox"></PasswordBox>
+        <PasswordBox DockPanel.Dock="Bottom" x:Name="PassBox" TabIndex="1"/>
         <TextBlock DockPanel.Dock="Bottom" FontSize="15">Contraseña</TextBlock>
         <TextBlock DockPanel.Dock="Bottom" x:Name="UsuarioErrorTextBlock" Text="El usuario es incorrecto" Visibility="Hidden" Foreground="Red" />
-        <TextBox DockPanel.Dock="Bottom" x:Name="UsuarioTextBox"></TextBox>
+        <TextBox DockPanel.Dock="Bottom" x:Name="UsuarioTextBox" TabIndex="0"></TextBox>
         <TextBlock DockPanel.Dock="Bottom" FontSize="15">Usuario</TextBlock>
         <Image Margin="0,10,0,0" Width="250" Height="250" Source="logoADNTransparente.png" />
     </DockPanel>

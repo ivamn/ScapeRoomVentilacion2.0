@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -20,10 +21,8 @@ namespace ScapeRoomVentilacion
     /// </summary>
     public partial class MainWindow : Window
     {
-        //#dbce18#eb6323
-        private static string Pass { get; set; } = "";
-        //@clementjose
-        private static string Usuario { get; set; } = "";
+        private static string Pass { get; set; } = "#dbce18#eb6323";
+        private static string Usuario { get; set; } = "@clementjose";
 
         public MainWindow()
         {
@@ -37,11 +36,12 @@ namespace ScapeRoomVentilacion
                 Window1 window = new Window1();
                 window.Activate();
                 window.Show();
-                this.Close();
+                Close();
             }
             if (PassBox.Password != Pass)
             {
                 PassErrorTextBlock.Visibility = Visibility.Visible;
+                AnimarTextBlock(PassErrorTextBlock);
             }
             else
             {
@@ -50,11 +50,28 @@ namespace ScapeRoomVentilacion
             if (UsuarioTextBox.Text != Usuario)
             {
                 UsuarioErrorTextBlock.Visibility = Visibility.Visible;
+                AnimarTextBlock(UsuarioErrorTextBlock);
             }
             else
             {
                 UsuarioErrorTextBlock.Visibility = Visibility.Hidden;
             }
+        }
+
+        private void AnimarTextBlock(TextBlock t)
+        {
+            ThicknessAnimation ida = new ThicknessAnimation(new Thickness(0), new Thickness(5, 0, 0, 0), TimeSpan.FromSeconds(0.1));
+            ida.Completed += (s, e) =>
+            {
+                ThicknessAnimation vuelta = new ThicknessAnimation(new Thickness(5, 0, 0, 0), new Thickness(0, 0, 0, 0), TimeSpan.FromSeconds(0.1));
+                t.BeginAnimation(MarginProperty, vuelta);
+            };
+            t.BeginAnimation(MarginProperty, ida);
+        }
+
+        private void Animation_Completed(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
